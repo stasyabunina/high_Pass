@@ -1,0 +1,195 @@
+.hero {
+  margin-bottom: 68px;
+
+  &__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__right-title {
+    margin: 0;
+    margin-bottom: 18px;
+    font-family: "TT Firs Neue", sans-serif;
+    color: $textColor;
+    font-weight: 700;
+    font-size: $titleFs;
+    line-height: 25px;
+  }
+
+  &__left-title {
+    margin: 0;
+    margin-bottom: 19px;
+    font-family: "TT Firs Neue", sans-serif;
+    color: $white;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 37.4px;
+  }
+
+  &__left {
+    position: relative;
+  }
+
+  &__left {
+    height: 100%;
+    padding: 58px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: darkblue;
+    background-image: url('img/hero-left.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__author {
+    margin-bottom: 3px;
+    color: $white;
+    font-weight: 400;
+    line-height: 19px;
+  }
+
+  &__btn {
+    padding: 12px 19px;
+    border: solid 3px $primaryColor;
+    background-color: $primaryColor;
+    color: $white;
+    line-height: 19px;
+    font-weight: 700;
+    outline: none;
+
+    &:focus-visible {
+      border-color: $thirdColor;
+      transition: border-color 0.2s ease-in-out;
+    }
+
+    &:active {
+      background-color: $thirdColor;
+      transition: background-color 0.2s ease-in-out;
+    }
+  }
+
+  &__grid {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__first-picture {
+    grid-column: span 2;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 14px;
+    font-weight: 400;
+    font-size: $smallFs;
+    line-height: 16.4px;
+    color: $white;
+    background-color: $textColor;
+    z-index: 60;
+  }
+
+  &__img-wrapper {
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    margin-bottom: 69px;
+
+    &__left {
+      padding: 30px 30px;
+      background-image: url('img/hero-left-1024.jpg');
+    }
+
+    &__left-title {
+      font-size: 34px;
+      line-height: 34px;
+    }
+
+    &__author {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    &__left {
+      background-image: url('img/hero-left-768.jpg');
+    }
+
+    &__author {
+      margin-bottom: 14px;
+    }
+
+    &__left-title {
+      margin-bottom: 24px;
+      line-height: 30.6px;
+    }
+
+    &__right-title {
+      font-size: 22px;
+      line-height: 23px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    margin-bottom: 53px;
+
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    &__left {
+      min-height: 422px;
+      background-image: url('img/hero-left-320.jpg');
+    }
+
+    &__left-title {
+      margin-bottom: 14px;
+      font-size: $titleFs;
+      line-height: 26.4px;
+    }
+
+    &__author {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__badge {
+      padding: 4px 7px;
+      font-size: 12px;
+      line-height: 14px;
+      top: 6px;
+      right: 5px;
+    }
+
+    &__right-title {
+      font-size: 18px;
+      line-height: 18.7px;
+    }
+
+    &__img-wrapper {
+      width: 100%;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
+    &__btn {
+      padding: 12px 22px;
+      font-size: $smallFs;
+      line-height: 16.4px;
+    }
+  }
+}

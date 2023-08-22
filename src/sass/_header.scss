@@ -1,0 +1,330 @@
+.header {
+  padding: 24px 0 25px 0;
+  background-color: $textColor;
+  margin-bottom: 41px;
+
+  &__wrapper {
+    position: relative;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+
+  &__form {
+    width: 539px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    z-index: 14;
+    transform: translateY(-75%);
+    background-color: $textColor;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  }
+
+  &__burger-close {
+    display: none;
+  }
+
+  &__telephone {
+    display: none;
+  }
+
+  &__form--active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__search-input {
+    margin-right: 9px;
+    flex-grow: 1;
+    border: none;
+    border-bottom: solid $bgColor 1px;
+    font-family: "TT Firs Neue", sans-serif;
+    color: $bgColor;
+    font-weight: 400;
+    line-height: 20.6px;
+    background-color: $textColor;
+    outline: none;
+
+    &::placeholder {
+      color: $bgColor;
+    }
+
+    &:focus-visible {
+      border-color: $primaryColor;
+      transition: border-color 0.2s ease-in-out;
+    }
+
+    &:active {
+      border-color: $thirdColor;
+      transition: border-color 0.2s ease-in-out;
+    }
+  }
+
+  &__search-close {
+    width: 23px;
+    height: 23px;
+    background-color: transparent;
+  }
+
+  &__logo {
+    grid-column: span 3;
+  }
+
+  &__nav {
+    grid-column: span 7;
+  }
+
+  &__burger-wrapper {
+    display: none;
+  }
+
+  &__search {
+    grid-column: span 2;
+    text-align: end;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__search-svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__search {
+    background-color: transparent;
+  }
+
+  &__svg {
+    width: 191px;
+    height: 31px;
+  }
+
+  &__nav-link {
+    outline: none;
+
+    &:focus-visible {
+      background-color: $secondaryColor;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    &:active {
+      background-color: transparent;
+      @include active;
+    }
+  }
+
+  &__item {
+    font-family: "TT Firs Neue", sans-serif;
+    color: $white;
+    font-weight: 400;
+    line-height: 20.6px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .header {
+    &__svg {
+      width: 166px;
+      height: 27px;
+    }
+
+    &__form {
+      width: 42%;
+    }
+  }
+}
+
+@media (max-width: 962px) {
+  .header {
+    margin-bottom: 34px;
+    padding: 20px 0 0 0;
+
+    &__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    &__logo {
+      grid-column: span 1;
+    }
+
+    &__nav {
+      padding: 12px 27px;
+      margin-left: -27px;
+      margin-right: -27px;
+      background-color: $darkGray;
+      order: 3;
+      grid-column: span 2;
+    }
+
+    &__search {
+      order: 2;
+      grid-column: span 1;
+    }
+
+    &__form {
+      top: 0;
+      width: 342px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 12px 0 0 0;
+    margin-bottom: 29px;
+
+    &__wrapper {
+      gap: 12px;
+    }
+
+    &__list {
+      @include grid;
+      grid-row: span 8;
+      grid-template-columns: 1fr;
+    }
+
+    &__burger-close {
+      grid-row: span 1;
+    }
+
+    &__telephone {
+      grid-row: span 9;
+    }
+
+    &__nav {
+      margin: 0;
+      @include grid;
+      gap: 16px;
+      grid-template-rows: repeat(18, 1fr);
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 100;
+      padding: 14px 18px 36px 18px;
+      background-color: $textColor;
+      overflow-y: auto;
+      visibility: hidden;
+      transform: translateX(-120%);
+      transition: visibility 0.2s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+    &__svg {
+      width: 112px;
+      height: 18px;
+    }
+
+    &__form {
+      width: 100%;
+    }
+
+    &__search-close {
+      width: 18px;
+      height: 18px;
+    }
+
+    &__search-input {
+      font-size: $smallFs;
+      line-height: 18px;
+    }
+
+    &__search-svg {
+      width: 21px;
+      height: 19px;
+    }
+
+    &__burger-wrapper {
+      padding: 12px 27px 11px 27px;
+      margin-left: -27px;
+      margin-right: -27px;
+      background-color: $darkGray;
+      grid-column: span 2;
+      order: 3;
+    }
+
+    &__burger-wrapper {
+      display: block;
+    }
+
+    &__burger {
+      position: relative;
+      width: 20px;
+      height: 22px;
+      background-color: transparent;
+    }
+
+    &__nav--active {
+      visibility: visible;
+      transform: none;
+    }
+
+    &__burger-close {
+      display: block;
+      background-color: transparent;
+      width: 18px;
+      height: 18px;
+    }
+
+    &__burger-svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &__telephone {
+      display: block;
+      align-self: flex-end;
+    }
+
+    &__phone-svg {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      vertical-align: middle;
+    }
+
+    &__phone {
+      @include phone;
+    }
+  }
+
+  .burger {
+    &__line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+      }
+
+      &:last-child {
+        left: 25%;
+        width: 50%;
+        bottom: 0;
+      }
+    }
+  }
+}

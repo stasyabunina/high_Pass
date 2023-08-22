@@ -1,0 +1,47 @@
+@media (any-hover: hover) {
+  .header__search-input {
+    &:hover {
+      border-color: $primaryColor;
+      transition: border-color 0.2s ease-in-out;
+    }
+  }
+
+  .header__nav-link {
+    &:hover {
+      @include hover;
+    }
+  }
+
+  .hero__btn {
+    &:hover {
+      background-color: $secondaryColor;
+      border-color: $secondaryColor;
+      transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    }
+  }
+
+  .about__input {
+    &:hover {
+      @include hover;
+    }
+  }
+
+  .project__btn {
+    &:hover {
+      background-color: $primaryColor;
+      transition: background-color 0.2s ease-in-out;
+    }
+  }
+
+  .contacts__form-input {
+    &:hover {
+      @include hover;
+    }
+  }
+
+  .socials__link {
+    &:hover .socials__svg {
+      @include hover;
+    }
+  }
+}

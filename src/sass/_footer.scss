@@ -1,0 +1,198 @@
+.footer {
+  padding: 20px 0;
+  background-color: $textColor;
+
+  &__wrapper {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &__left {
+    grid-column: span 4;
+  }
+
+  &__middle {
+    grid-column: span 6;
+    max-width: 361px;
+  }
+
+  &__right {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  &__svg {
+    width: 191px;
+    height: 31px;
+  }
+
+  &__logo-text {
+    font-family: "TT Firs Neue", sans-serif;
+    font-size: $smallFs;
+    color: $bgColor;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  &__quote {
+    margin: 0;
+    color: $lightGray;
+    line-height: $smallLh;
+    font-weight: 400;
+  }
+
+  &__quote-author {
+    margin: 0;
+    color: $lightGray;
+    line-height: $smallLh;
+    font-weight: 400;
+  }
+}
+
+.socials {
+  &__text {
+    display: block;
+    margin-bottom: 8px;
+    color: $lightGray;
+    line-height: $smallLh;
+    font-weight: 400;
+    text-align: end;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__link {
+    min-width: 30px;
+    min-height: 30px;
+    outline: none;
+
+    &:focus-visible .socials__svg {
+      color: $secondaryColor;
+      transition: color 0.2s ease-in-out;
+    }
+
+    &:active .socials__svg {
+      @include active;
+    }
+  }
+
+  &__svg {
+    color: $lightGray;
+  }
+
+  &__wrapper {
+    max-width: 161px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.first-link {
+  margin-right: 20px;
+}
+
+@media (max-width: 1360px) {
+  .footer {
+    padding: 24px 0;
+
+    &__wrapper {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    &__middle {
+      grid-column: span 3;
+    }
+
+    &__right {
+      grid-column: span 2;
+    }
+
+    &__left {
+      grid-column: span 3;
+    }
+
+    &__svg {
+      width: 166px;
+      height: 27px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    &__middle {
+      display: none;
+    }
+
+    &__right {
+      grid-column: auto;
+    }
+
+    &__left {
+      grid-column: auto;
+    }
+
+    &__logo {
+      padding-top: 6px;
+    }
+
+    &__wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 24px 0 0 0;
+
+    &__right {
+      order: 1;
+      grid-column: span 3;
+      justify-content: center;
+    }
+
+    &__svg {
+      width: 112px;
+      height: 18px;
+    }
+
+    &__logo {
+      padding-top: 0;
+      margin-bottom: 4px;
+    }
+
+    &__logo-text {
+      font-size: 10px;
+      line-height: 13px;
+    }
+
+    &__left {
+      padding: 16px 0;
+      margin-left: -21px;
+      margin-right: -21px;
+      order: 2;
+      grid-column: span 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $darkGray;
+    }
+
+    &__wrapper {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 22px;
+    }
+  }
+}

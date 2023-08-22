@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('RobotoBold'),
+    url('fonts/roboto-v30-cyrillic_latin-700.woff2') format('woff2'),
+    url('fonts/roboto-v30-cyrillic_latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('RobotoRegular'),
+    url('fonts/roboto-v30-cyrillic_latin-regular.woff2') format('woff2'),
+    url('fonts/roboto-v30-cyrillic_latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('TTFirsNeueBold'),
+    url('fonts/TTFirsNeue-Bold.woff2') format('woff2'),
+    url('fonts/TTFirsNeue-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('TTFirsNeueMedium'),
+    url('fonts/TTFirsNeue-Medium.woff2') format('woff2'),
+    url('fonts/TTFirsNeue-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('TTFirsNeueRegular'),
+    url('fonts/TTFirsNeue-Regular.woff2') format('woff2'),
+    url('fonts/TTFirsNeue-Regular.woff') format('woff');
+}

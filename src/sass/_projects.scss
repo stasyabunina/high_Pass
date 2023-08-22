@@ -1,0 +1,430 @@
+.projects {
+  margin-bottom: 65px;
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "one one two two three three four four four four four four"
+      "five five five five five five six six six seven seven seven";
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__card {
+    position: relative;
+  }
+}
+
+.project-four h3 {
+  margin-bottom: 5px;
+  font-family: "TT Firs Neue", sans-serif;
+  font-weight: 700;
+  font-size: $titleFs;
+  line-height: 24px;
+  color: $white;
+}
+
+.project-four p {
+  color: $white;
+}
+
+.project-five h3 {
+  margin-bottom: 4px;
+  font-family: "TT Firs Neue", sans-serif;
+  font-weight: 700;
+  font-size: $titleFs;
+  line-height: 24px;
+  color: $white;
+}
+
+.project-five p {
+  color: $white;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  &__badge {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    padding: 6px 14px;
+    font-weight: 400;
+    font-size: $smallFs;
+    line-height: 16.4px;
+    color: $white;
+    background-color: $textColor;
+    z-index: 60;
+  }
+
+  &__text-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 22px 30px 30px 30px;
+    z-index: 50;
+  }
+
+  &__desc-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__title {
+    max-width: 292px;
+    margin: 0;
+    margin-bottom: 13px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: $smallLh;
+    color: $textColor;
+  }
+
+  &__desc {
+    max-width: 292px;
+    margin: 0;
+    font-weight: 400;
+    line-height: $smallLh;
+  }
+
+  &__date {
+    margin-bottom: 3px;
+  }
+
+  &__svg {
+    color: $gray;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+  }
+
+  &__date-text {
+    display: inline-block;
+    color: $gray;
+    font-size: 12px;
+    line-height: $smallLh;
+    font-weight: 400;
+    vertical-align: middle;
+  }
+
+  &__btn {
+    justify-self: flex-end;
+    padding: 12px 19px;
+    background-color: transparent;
+    border: 3px $primaryColor solid;
+    color: $white;
+    font-weight: 700;
+    line-height: 19px;
+    outline: none;
+
+    &:focus-visible {
+      background-color: $secondaryColor;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    &:active {
+      background-color: $thirdColor;
+      border-color: $thirdColor;
+      transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    }
+  }
+
+  &__img-wrapper {
+    display: block;
+    margin-bottom: 12px;
+  }
+}
+
+.project-four {
+  height: 100%;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("img/projects4.jpg");
+    background-position: center;
+    background-color: $black;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__date span {
+    color: $white;
+  }
+
+  &__date svg {
+    color: $white;
+  }
+
+  &__desc-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+}
+
+.project-five {
+  height: 100%;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("img/projects5.jpg");
+    background-position: center;
+    background-color: $black;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__date span {
+    color: $white;
+  }
+
+  &__date svg {
+    color: $white;
+  }
+
+  &__desc-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+}
+
+.projects-one {
+  grid-area: one;
+}
+
+.projects-two {
+  grid-area: two;
+}
+
+.projects-three {
+  grid-area: three;
+}
+
+.projects-four {
+  grid-area: four;
+}
+
+.projects-five {
+  grid-area: five;
+}
+
+.projects-six {
+  grid-area: six;
+}
+
+.projects-seven {
+  grid-area: seven;
+}
+
+@media (max-width: 1024px) {
+  .projects {
+    &__list {
+      grid-template-columns: repeat(8, 1fr);
+      gap: 24px 30px;
+      grid-template-areas:
+        "one one two two three three three three"
+        "four four four four four six six six"
+        "seven seven seven five five five five five";
+      ;
+    }
+  }
+
+  .project-four {
+    &__img {
+      background-image: url("img/projects4-1024.jpg");
+    }
+  }
+
+  .project-five {
+    &__img {
+      background-image: url("img/projects5-1024.jpg");
+    }
+  }
+
+  .project {
+    &__badge {
+      right: 10px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .projects {
+    margin-bottom: 68px;
+
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+      gap: 26px 30px;
+      grid-template-areas:
+        "one one two two three three"
+        "four four four four four four"
+        "six six six seven seven seven"
+        "five five five five five five";
+    }
+  }
+
+  .project-four {
+    min-height: 300px;
+
+    &__img {
+      background-image: url("img/projects4-768.jpg");
+    }
+  }
+
+  .project-five {
+    min-height: 300px;
+
+    &__img {
+      background-image: url("img/projects5-768.jpg");
+    }
+  }
+
+  .project {
+    &__badge {
+      right: 7px;
+    }
+
+    &__text-wrapper {
+      padding: 27px 30px 30px 30px;
+    }
+
+    &__img-wrapper {
+      margin-bottom: 15px;
+    }
+
+    &__title {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .projects {
+    margin-bottom: 34px;
+
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 23px;
+      grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "six"
+        "seven"
+        "five";
+    }
+
+    &__title {
+      margin-bottom: 15px;
+    }
+  }
+
+  .project {
+    &__img-wrapper {
+      width: 100%;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
+    &__btn {
+      font-size: $smallFs;
+      line-height: 16.4px;
+      padding: 9px 18px;
+    }
+
+    &__text-wrapper {
+      justify-content: flex-end;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__badge {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  .project-four {
+    min-height: 422px;
+
+    &__img {
+      background-image: url("img/projects4-320.jpg");
+    }
+
+    &__desc-wrapper {
+      flex-grow: 0;
+      justify-content: flex-end;
+    }
+  }
+
+  .project-five {
+    min-height: 422px;
+
+    &__img {
+      background-image: url("img/projects5-320.jpg");
+    }
+
+    &__desc-wrapper {
+      justify-content: flex-end;
+      flex-grow: 0;
+    }
+  }
+
+  .project-four p {
+    margin-bottom: 22px;
+    font-size: $smallFs;
+    line-height: 18px;
+  }
+
+  .project-five p {
+    margin-bottom: 25px;
+    font-size: $smallFs;
+    line-height: 18px;
+  }
+
+  .project-five h3 {
+    margin-bottom: 6px;
+  }
+
+  .project-four h3 {
+    margin-bottom: 6px;
+  }
+}
